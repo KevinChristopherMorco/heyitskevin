@@ -1,13 +1,26 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  html {
+    @apply min-h-full font-sans;
+  }
+  body {
+    @apply bg-primary min-h-screen text-accent;
+  }
+
+  #root {
+    @apply min-h-screen flex flex-col justify-between;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: local("Roboto"),
+      url(../src/fonts/RobotoMono-Medium.ttf) format("truetype");
+  }
 }
