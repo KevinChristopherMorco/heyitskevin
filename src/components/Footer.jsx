@@ -21,25 +21,25 @@ const Footer = () => {
         </p>
       </div>
       <div className="text-xl">
-        <p className="my-4">Contacts:</p>
+        <p className="my-4 text-2xl font-bold">Contacts:</p>
         <ul className="flex flex-col gap-y-3">
           <li className="py-2 w-1/2 border-b border-accent">
-            <a className="w-4/5 flex items-center gap-x-4">
+            <a className="w-4/5 flex items-center gap-x-2 font-semibold">
               <FontAwesomeIcon icon={faGithub} /> Github
             </a>
           </li>
           <li className="py-2 w-1/2 border-b border-accent">
-            <a className="w-4/5 flex items-center gap-x-4">
+            <a className="w-4/5 flex items-center gap-x-2 font-semibold">
               <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
             </a>
           </li>
           <li className="py-2 w-1/2 border-b border-accent">
-            <a className="w-4/5 flex items-center gap-x-4">
+            <a className="w-4/5 flex items-center gap-x-2 font-semibold">
               <FontAwesomeIcon icon={faDiscord} /> Discord
             </a>
           </li>
           <li className="py-2 w-1/2 border-b border-accent">
-            <a className="w-4/5 flex items-center gap-x-4">
+            <a className="w-4/5 flex items-center gap-x-2 font-semibold">
               <FontAwesomeIcon icon={faFacebookMessenger} /> Facebook
             </a>
           </li>
