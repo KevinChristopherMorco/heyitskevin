@@ -4,7 +4,7 @@
     "title": "Keeper",
     "subtitle": "Mini Project",
     "information": "An app that lets you create notes.",
-    "stack": ["fa-html5", "fa-css3", "fa-square-js"],
+    "stack": ["javascript", "react", "html", "css"],
     "gitRef": "https://github.com/KevinChristopherMorco/Keeper",
     "liveRef": "https://keeper-puce.vercel.app/",
     "liveSite": true
@@ -14,7 +14,7 @@
     "title": "Word Dictionary",
     "subtitle": "Mini Project",
     "information": "An app that gets the meaning of words.",
-    "stack": ["fa-html5", "fa-css3", "fa-square-js"],
+    "stack": ["javascript", "html", "css"],
     "gitRef": "https://github.com/KevinChristopherMorco/word-dictionary",
     "liveRef": "https://word-dictionary-iota.vercel.app/",
     "liveSite": true
@@ -24,7 +24,7 @@
     "title": "To-Do App",
     "subtitle": "Mini Project",
     "information": "An app that tracks your tasks.",
-    "stack": ["fa-html5", "fa-css3", "fa-square-js"],
+    "stack": ["javascript", "html", "css"],
     "gitRef": "https://github.com/KevinChristopherMorco/To-Do-List",
     "liveRef": "https://to-do-list-murex-five.vercel.app/",
     "liveSite": true
@@ -35,7 +35,7 @@
     "title": "Global Pulse",
     "subtitle": "Mini Project",
     "information": "Global Pulse is a news app that lets you browse the news.",
-    "stack": ["fa-html5", "fa-css3", "fa-square-js"],
+    "stack": ["javascript", "html", "css"],
     "gitRef": "https://github.com/KevinChristopherMorco/news-app",
     "liveRef": "https://news-app-zeta-sage.vercel.app/",
     "liveSite": true
@@ -46,7 +46,7 @@
     "title": "IP Address Tracker",
     "subtitle": "Mini Project",
     "information": "An app that tracks IP address details.",
-    "stack": ["fa-html5", "fa-css3", "fa-square-js"],
+    "stack": ["javascript", "html", "css"],
     "gitRef": "https://github.com/KevinChristopherMorco/ip-address-tracker",
     "liveRef": "https://ip-address-tracker-phi-azure.vercel.app/",
     "liveSite": true
@@ -56,7 +56,7 @@
     "title": "Tip Calculator",
     "subtitle": "Mini Project",
     "information": "An app that calculates tip percentage and total.",
-    "stack": ["fa-html5", "fa-css3", "fa-square-js"],
+    "stack": ["javascript", "html", "css"],
     "gitRef": "https://github.com/KevinChristopherMorco/tip-calculator",
     "liveRef": "https://tip-calculator-wheat-zeta.vercel.app/",
     "liveSite": true
@@ -66,7 +66,7 @@
     "title": "Advice Generator App",
     "subtitle": "Mini Project",
     "information": "An app that generates random advice.",
-    "stack": ["fa-html5", "fa-css3", "fa-square-js"],
+    "stack": ["javascript", "html", "css"],
     "gitRef": "https://github.com/KevinChristopherMorco/advice-generator-app",
     "liveRef": "https://advice-generator-app-sigma-umber.vercel.app/",
     "liveSite": true
@@ -77,7 +77,7 @@
     "title": "Rock Paper Scissors",
     "subtitle": "Mini Project",
     "information": "A classic game of rock paper and scissors.",
-    "stack": ["fa-html5", "fa-css3", "fa-square-js"],
+    "stack": ["javascript", "html", "css"],
     "gitRef": "https://github.com/KevinChristopherMorco/rock-paper-scissors",
     "liveRef": "https://rock-paper-scissors-gamma-sandy.vercel.app/",
     "liveSite": true
@@ -87,7 +87,7 @@
     "title": "Time Tracking Dashboard",
     "subtitle": "Web Design",
     "information": "A web template that allows users to track time.",
-    "stack": ["fa-html5", "fa-css3", "fa-square-js"],
+    "stack": ["javascript", "html", "css"],
     "gitRef": "https://github.com/KevinChristopherMorco/time-tracking-dashboard",
     "liveSite": false
   }

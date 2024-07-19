@@ -13,48 +13,48 @@ const Skills = () => {
   return (
     <section className="flex flex-col gap-y-12">
       <p className="text-3xl font-bold">Tech Stacks</p>
-      <ul className="flex flex-col items-center gap-y-10 text-xl">
-        <li className="w-2/3 flex justify-center items-center gap-x-2">
+      <ul className="flex flex-wrap justify-around items-center gap-x-4 gap-y-10 text-medium font-semibold">
+        <li className="flex items-center gap-x-2">
           <span className="text-js">
-            <IconBrandJavascript size={40} />
+            <IconBrandJavascript size={32} />
           </span>
           Javascript
         </li>
-        <li className="w-2/3 flex justify-center items-center gap-x-2">
+        <li className="flex items-center gap-x-2">
           <span className="text-css">
-            <IconBrandCss3 size={40} />
+            <IconBrandCss3 size={32} />
           </span>
           CSS
         </li>
-        <li className="w-2/3 flex justify-center items-center gap-x-2">
+        <li className="flex items-center gap-x-2">
           <span className="text-html">
-            <IconBrandHtml5 size={40} />
+            <IconBrandHtml5 size={32} />
           </span>
           HTML
         </li>
-        <li className="w-2/3 flex justify-center items-center gap-x-2">
+        <li className="flex items-center gap-x-2">
           <span className="text-react">
-            <IconBrandReact size={40} />
+            <IconBrandReact size={32} />
           </span>
           React
         </li>
-        <li className="w-2/3 flex justify-center items-center gap-x-2">
+        <li className="flex items-center gap-x-2">
           <span className="text-tailwind">
-            <IconBrandTailwind size={40} />
+            <IconBrandTailwind size={32} />
           </span>
           Tailwind
         </li>
-        <li className="w-2/3 flex justify-center items-center gap-x-2">
-          <span className="text-bootstrap">
-            <IconBrandBootstrap size={40} />
-          </span>
-          Bootstrap
-        </li>
-        <li className="w-2/3 flex justify-center items-center gap-x-2">
+        <li className="flex items-center gap-x-2">
           <span className="text-git">
-            <IconBrandGit size={40} />
+            <IconBrandGit size={32} />
           </span>
           Git
+        </li>
+        <li className="flex items-center gap-x-2">
+          <span className="text-bootstrap">
+            <IconBrandBootstrap size={32} />
+          </span>
+          Bootstrap
         </li>
       </ul>
     </section>

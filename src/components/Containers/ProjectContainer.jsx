@@ -6,7 +6,7 @@ const ProjectContainer = () => {
   return (
     <section className="flex flex-col gap-y-12">
       <p className="text-3xl font-bold">Projects</p>
-      <div className="flex flex-col gap-y-10">
+      <div className="flex flex-col gap-y-20">
         {project.map((project, index) => {
           return (
             <Card
@@ -17,6 +17,7 @@ const ProjectContainer = () => {
               description={project.information}
               liveLink={project.liveRef}
               sourceLink={project.gitRef}
+              projectStack={project.stack}
             />
           );
         })}
