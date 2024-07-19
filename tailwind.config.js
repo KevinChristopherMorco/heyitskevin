@@ -22,6 +22,26 @@ module.exports = {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
       },
+      transitionProperty: {
+        width: "width",
+        margin: "margin",
+      },
+      keyframes: {
+        slideIn: {
+          "0%": { visibility: "hidden", marginRight: "-16rem" },
+          "99%": { visibility: "visible", marginRight: "0" },
+          "100%": { visibility: "visible", marginRight: "0" },
+        },
+        slideOut: {
+          "0%": { visibility: "visible", marginRight: "0" },
+          "99%": { visibility: "visible", marginRight: "-16rem" },
+          "100%": { visibility: "hidden", marginRight: "-16rem" },
+        },
+      },
+      animation: {
+        slideIn: "slideIn 0.4s ease-in-out forwards",
+        slideOut: "slideOut 0.4s ease-in-out forwards",
+      },
     },
   },
   plugins: [],

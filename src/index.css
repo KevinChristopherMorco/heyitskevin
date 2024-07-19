@@ -8,20 +8,16 @@
   padding: 0;
 }
 
-body {
-  margin: 0;
-}
-
 @layer base {
   html {
-    @apply min-h-full font-sans;
+    @apply min-h-full font-sans scroll-smooth;
   }
   body {
     @apply bg-primary min-h-screen text-accent;
   }
 
   #root {
-    @apply min-h-screen flex flex-col justify-between gap-y-20;
+    @apply min-h-screen flex flex-col justify-between gap-y-20 relative;
   }
 
   @font-face {

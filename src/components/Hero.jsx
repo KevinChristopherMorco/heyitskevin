@@ -6,7 +6,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center" id="intro">
       <div>
         <img src={computer} alt="Computer" className="w-72 h-72" />
       </div>

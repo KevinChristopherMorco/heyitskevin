@@ -9,7 +9,10 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="py-5 px-4 flex flex-col gap-y-10 text-3xl border-t-2 border-accent">
+    <footer
+      className="py-5 px-4 flex flex-col gap-y-10 text-3xl border-t-2 border-accent"
+      id="contacts"
+    >
       <div>
         <p>Hey there!</p>
         <p>

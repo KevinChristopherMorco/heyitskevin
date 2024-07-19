@@ -3,7 +3,7 @@ import author from "../images/author/grad-pic.png";
 
 const About = () => {
   return (
-    <section className="flex flex-col gap-y-12">
+    <section className="flex flex-col gap-y-12" id="about">
       <p className="text-3xl font-bold">Who am I?</p>
       <img src={author} alt="author" className="w-52 h-52 m-auto" />
       <p className="text-center">

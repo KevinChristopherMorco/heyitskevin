@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/logo/dark-theme.png";
 
-const Header = () => {
+const Header = ({ setActive }) => {
   return (
     <header>
       <nav className="my-8 mx-4 p-3 flex justify-between items-center text-accent border-2 border-accent rounded-xl">
@@ -11,6 +11,7 @@ const Header = () => {
         <FontAwesomeIcon
           className="color-accent text-lg cursor-pointer"
           icon={faBars}
+          onClick={() => setActive(true)}
         />
       </nav>
     </header>

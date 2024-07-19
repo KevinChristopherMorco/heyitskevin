@@ -5,11 +5,19 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import ProjectContainer from "./components/Containers/ProjectContainer";
+import Hamburger from "./components/Hamburger";
+
+import { useState } from "react";
 
 function App() {
+  const [isActive, setActive] = useState(false);
+
+  const lol = (state) => {
+    setActive(state);
+  };
   return (
     <>
-      <Header />
+      <Header setActive={lol} />
       <div className="px-5 flex flex-col gap-y-32">
         <Hero />
         <About />
@@ -17,6 +25,7 @@ function App() {
         <ProjectContainer />
       </div>
       <Footer />
+      <Hamburger isActive={isActive} setActive={lol} />
     </>
   );
 }
