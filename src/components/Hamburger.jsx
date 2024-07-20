@@ -1,6 +1,7 @@
 import React from "react";
-import { IconX } from "@tabler/icons-react";
+import { IconX, IconLanguageHiragana } from "@tabler/icons-react";
 import logo from "../images/logo/dark-theme.png";
+import { useState } from "react";
 
 const Hamburger = ({ isActive, setActive }) => {
   return (
@@ -10,18 +11,18 @@ const Hamburger = ({ isActive, setActive }) => {
       }`}
     >
       <div
-        className={`w-2/3 px-6 fixed right-0 bg-primary text-accent
- ${isActive ? "h-full animate-slideIn " : "h-full animate-slideOut"}`}
+        className={`w-3/5 h-full fixed transition-all ease-in-out delay-50	bg-primary text-accent
+        ${isActive ? "right-0" : "-right-full"}`}
       >
-        <div className="flex py-6 justify-between items-center">
-          <div className="w-20 h-5">
-            <img src={logo} />
-          </div>
+        <div className="flex px-6 py-5 justify-between items-center border-b border-gray-100">
           <div className="cursor-pointer" onClick={() => setActive(false)}>
             <IconX />
           </div>
+          <div className="cursor-pointer" onClick={() => setActive(false)}>
+            <IconLanguageHiragana />
+          </div>
         </div>
-        <div className="h-1/3 mt-8 flex flex-col justify-between text-lg">
+        <div className="h-1/3 mt-8 px-6 flex flex-col justify-between text-lg">
           <a href="#intro" onClick={() => setActive(false)}>
             Intro
           </a>

@@ -24,10 +24,18 @@ const Hero = () => {
             <p>Passionate about Programming and Continuous Learning.</p>
           </div>
           <div className="my-2 flex justify-around items-center">
-            <a className="w-1/3 p-2 bg-accent text-primary text-center">
+            <a
+              href="https://github.com/KevinChristopherMorco"
+              target="_blank"
+              className="w-1/3 p-2 bg-accent text-primary text-center"
+            >
               <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>
-            <a className="w-2/5 p-2 text-center border border-accent">
+            <a
+              href="https://www.linkedin.com/in/kevin-christopher-morco-a9a361289/"
+              target="__blank"
+              className="w-2/5 p-2 text-center border border-accent"
+            >
               <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
             </a>
           </div>

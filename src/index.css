@@ -8,6 +8,64 @@
   padding: 0;
 }
 
+:root {
+  --color-dark-bg: #1f1f1f;
+  --color-dark-text: #e0e0e0;
+  --color-dark-primary: #bb86fc;
+  --color-dark-secondary: #03dac6;
+  --color-dark-accent: #cf6679;
+
+  --color-light-bg: #ffffff;
+  --color-light-text: #000000;
+  --color-light-primary: #6200ee;
+  --color-light-secondary: #03dac6;
+  --color-light-accent: #ff5722;
+
+  --color-aqua-bg: #e0f7fa;
+  --color-aqua-text: #00695c;
+  --color-aqua-primary: #00bcd4;
+  --color-aqua-secondary: #00796b;
+  --color-aqua-accent: #004d40;
+
+  --color-brown-bg: #dcaaa1;
+  --color-brown-text: #3e2723;
+  --color-brown-primary: #8d6e63;
+  --color-brown-secondary: #6d4c41;
+  --color-brown-accent: #ffab91;
+}
+
+.dark-theme {
+  --color-bg: var(--color-dark-bg);
+  --color-text: var(--color-dark-text);
+  --color-primary: var(--color-dark-primary);
+  --color-secondary: var(--color-dark-secondary);
+  --color-accent: var(--color-dark-accent);
+}
+
+.light-theme {
+  --color-bg: var(--color-light-bg);
+  --color-text: var(--color-light-text);
+  --color-primary: var(--color-light-primary);
+  --color-secondary: var(--color-light-secondary);
+  --color-accent: var(--color-light-accent);
+}
+
+.aqua-theme {
+  --color-bg: var(--color-aqua-bg);
+  --color-text: var(--color-aqua-text);
+  --color-primary: var(--color-aqua-primary);
+  --color-secondary: var(--color-aqua-secondary);
+  --color-accent: var(--color-aqua-accent);
+}
+
+.brown-theme {
+  --color-bg: var(--color-brown-bg);
+  --color-text: var(--color-brown-text);
+  --color-primary: var(--color-brown-primary);
+  --color-secondary: var(--color-brown-secondary);
+  --color-accent: var(--color-brown-accent);
+}
+
 @layer base {
   html {
     @apply min-h-full font-sans scroll-smooth;

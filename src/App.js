@@ -7,17 +7,24 @@ import Skills from "./components/Skills";
 import ProjectContainer from "./components/Containers/ProjectContainer";
 import Hamburger from "./components/Hamburger";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [isActive, setActive] = useState(false);
 
-  const lol = (state) => {
+  const menuState = (state) => {
     setActive(state);
   };
+
+  useEffect(() => {
+    isActive
+      ? document.body.classList.add("overflow-hidden")
+      : document.body.classList.remove("overflow-hidden");
+  }, [isActive]);
+
   return (
     <>
-      <Header setActive={lol} />
+      <Header setActive={menuState} />
       <div className="px-5 flex flex-col gap-y-32">
         <Hero />
         <About />
@@ -25,7 +32,7 @@ function App() {
         <ProjectContainer />
       </div>
       <Footer />
-      <Hamburger isActive={isActive} setActive={lol} />
+      <Hamburger isActive={isActive} setActive={menuState} />
     </>
   );
 }

@@ -1,18 +1,25 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import logo from "../images/logo/dark-theme.png";
+import { IconMenu2 } from "@tabler/icons-react";
+
+import logo from "../images/logo/logo.png";
 
 const Header = ({ setActive }) => {
   return (
-    <header>
-      <nav className="my-8 mx-4 p-3 flex justify-between items-center text-accent border-2 border-accent rounded-xl">
-        <img src={logo} className="w-1/3 h-1/3" />
-        <FontAwesomeIcon
-          className="color-accent text-lg cursor-pointer"
-          icon={faBars}
-          onClick={() => setActive(true)}
-        />
+    <header className="fixed w-[90%] left-1/2 -translate-x-1/2">
+      <nav className="flex justify-between items-stretch bg-primary/60 text-accent border-2 border-accent rounded-xl">
+        <div className="m-4">
+          <img src={logo} className="h-8 w-8" />
+        </div>
+        <div className="flex items-end">
+          <button
+            className="h-4/5 p-3 border-t border-l rounded-tl-xl border-accent text-lg color-accent cursor-pointer "
+            onClick={() => setActive(true)}
+          >
+            <IconMenu2 size={25} />
+          </button>
+        </div>
       </nav>
     </header>
   );
