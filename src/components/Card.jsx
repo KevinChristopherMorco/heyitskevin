@@ -19,12 +19,12 @@ const Card = ({
   projectStack,
 }) => {
   return (
-    <div className="min-h-96 flex flex-col justify-between shadow-sm shadow-slate-600 gap-y-6">
+    <div className="min-h-96 flex flex-col justify-between gap-y-6 bg-[var(--color-secondary)] rounded-lg">
       <div className="h-72">
         <img
           src={require(`../images/project-card/${image}`)}
           alt="image"
-          className="w-full h-full"
+          className="w-full h-full rounded-lg"
         />
       </div>
       <div className="p-4 flex flex-col gap-y-8">
@@ -80,14 +80,14 @@ const Card = ({
         <a
           href={liveLink}
           target="__blank"
-          className="w-1/2 p-2 flex justify-evenly items-center bg-accent text-primary text-center font-bold"
+          className="w-1/2 p-2 flex justify-evenly items-center bg-[var(--color-accent)] text-[var(--color-text-accent)] text-center font-bold"
         >
           <IconDeviceGamepad2 size={20} /> Live Site
         </a>
         <a
           href={sourceLink}
           target="__blank"
-          className="w-2/5 p-2 flex justify-evenly items-center text-center border border-accent"
+          className="w-2/5 p-2 flex justify-evenly items-center text-center border border-[var(--color-text)]"
         >
           <IconTerminal2 /> Source
         </a>

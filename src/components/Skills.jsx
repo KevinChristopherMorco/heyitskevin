@@ -12,7 +12,11 @@ import {
 const Skills = () => {
   return (
     <section className="flex flex-col gap-y-12" id="skills">
-      <p className="text-3xl font-bold">Tech Stacks</p>
+      <div className="flex items-center gap-x-4">
+        <div className="w-10 border-t-2 border-[var(--color-accent)]"></div>
+        <p className="text-3xl font-bold">Tech Stacks </p>
+        <div className="w-10 border-t-2 border-[var(--color-accent)]"></div>
+      </div>
       <ul className="flex flex-wrap justify-around items-center gap-x-4 gap-y-10 text-medium font-semibold">
         <li className="flex items-center gap-x-2">
           <span className="text-js">

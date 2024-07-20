@@ -8,65 +8,104 @@
   padding: 0;
 }
 
-:root {
-  --color-dark-bg: #1f1f1f;
-  --color-dark-text: #e0e0e0;
-  --color-dark-primary: #bb86fc;
-  --color-dark-secondary: #03dac6;
-  --color-dark-accent: #cf6679;
-
-  --color-light-bg: #ffffff;
-  --color-light-text: #000000;
-  --color-light-primary: #6200ee;
-  --color-light-secondary: #03dac6;
-  --color-light-accent: #ff5722;
-
-  --color-aqua-bg: #e0f7fa;
-  --color-aqua-text: #00695c;
-  --color-aqua-primary: #00bcd4;
-  --color-aqua-secondary: #00796b;
-  --color-aqua-accent: #004d40;
-
-  --color-brown-bg: #dcaaa1;
-  --color-brown-text: #3e2723;
-  --color-brown-primary: #8d6e63;
-  --color-brown-secondary: #6d4c41;
-  --color-brown-accent: #ffab91;
-}
-
-.dark-theme {
-  --color-bg: var(--color-dark-bg);
-  --color-text: var(--color-dark-text);
-  --color-primary: var(--color-dark-primary);
-  --color-secondary: var(--color-dark-secondary);
-  --color-accent: var(--color-dark-accent);
-}
-
-.light-theme {
-  --color-bg: var(--color-light-bg);
-  --color-text: var(--color-light-text);
-  --color-primary: var(--color-light-primary);
-  --color-secondary: var(--color-light-secondary);
-  --color-accent: var(--color-light-accent);
-}
-
-.aqua-theme {
-  --color-bg: var(--color-aqua-bg);
-  --color-text: var(--color-aqua-text);
-  --color-primary: var(--color-aqua-primary);
-  --color-secondary: var(--color-aqua-secondary);
-  --color-accent: var(--color-aqua-accent);
-}
-
-.brown-theme {
-  --color-bg: var(--color-brown-bg);
-  --color-text: var(--color-brown-text);
-  --color-primary: var(--color-brown-primary);
-  --color-secondary: var(--color-brown-secondary);
-  --color-accent: var(--color-brown-accent);
-}
-
 @layer base {
+  :root {
+    --color-dark-text: #fff;
+    --color-dark-text-accent: #000;
+    --color-dark-primary: #000;
+    --color-dark-secondary: #070707;
+    --color-dark-accent: #fff;
+    --color-dark-header: 0, 0, 0, 0.4;
+
+    --color-twilight-text: #fff;
+    --color-twilight-text-accent: #fff;
+    --color-twilight-primary: #150e17;
+    --color-twilight-secondary: #1f1522;
+    --color-twilight-accent: #7b34d4;
+    --color-twilight-header: 123, 52, 212, 0.4;
+
+    --color-blood-text: #fff;
+    --color-blood-text-accent: #fff;
+    --color-blood-primary: #8b0000;
+    --color-blood-secondary: #a30000;
+    --color-blood-accent: #e44a40;
+    --color-blood-header: 228, 74, 64, 0.4;
+
+    --color-white-text: #000;
+    --color-white-text-accent: #fff;
+    --color-white-primary: #fff;
+    --color-white-secondary: #f8f8f8;
+    --color-white-accent: #000;
+    --color-white-header: 255, 255, 255, 0.4;
+
+    --color-rainforest-text: #00644d;
+    --color-rainforest-text-accent: #fff;
+    --color-rainforest-primary: #e1e9d4;
+    --color-rainforest-secondary: #d7ddcc;
+    --color-rainforest-accent: #528439;
+    --color-rainforest-header: 82, 132, 57, 0.4;
+
+    --color-aqua-text: #03002d;
+    --color-aqua-text-accent: #04233c;
+    --color-aqua-primary: #cffcf9;
+    --color-aqua-secondary: #c2ecea;
+    --color-aqua-accent: #12cef7;
+    --color-aqua-header: 18, 206, 247, 0.4;
+  }
+
+  .classicBlackAndWhite {
+    --color-text: var(--color-dark-text);
+    --color-text-accent: var(--color-dark-text-accent);
+    --color-primary: var(--color-dark-primary);
+    --color-secondary: var(--color-dark-secondary);
+    --color-accent: var(--color-dark-accent);
+    --color-header: rgba(var(--color-dark-header));
+  }
+
+  .twilightBliss {
+    --color-text: var(--color-twilight-text);
+    --color-text-accent: var(--color-twilight-text-accent);
+    --color-primary: var(--color-twilight-primary);
+    --color-secondary: var(--color-twilight-secondary);
+    --color-accent: var(--color-twilight-accent);
+    --color-header: rgba(var(--color-twilight-header));
+  }
+
+  .bloodMoon {
+    --color-text: var(--color-blood-text);
+    --color-text-accent: var(--color-blood-text-accent);
+    --color-primary: var(--color-blood-primary);
+    --color-secondary: var(--color-blood-secondary);
+    --color-accent: var(--color-blood-accent);
+    --color-header: rgba(var(--color-blood-header));
+  }
+
+  .classicWhiteAndBlack {
+    --color-text: var(--color-white-text);
+    --color-text-accent: var(--color-white-text-accent);
+    --color-primary: var(--color-white-primary);
+    --color-secondary: var(--color-white-secondary);
+    --color-accent: var(--color-white-accent);
+    --color-header: rgba(var(--color-white-header));
+  }
+
+  .rainforestExplore {
+    --color-text: var(--color-rainforest-text);
+    --color-text-accent: var(--color-rainforest-text-accent);
+    --color-primary: var(--color-rainforest-primary);
+    --color-secondary: var(--color-rainforest-secondary);
+    --color-accent: var(--color-rainforest-accent);
+    --color-header: rgba(var(--color-rainforest-header));
+  }
+
+  .blessedAqua {
+    --color-text: var(--color-aqua-text);
+    --color-text-accent: var(--color-aqua-text-accent);
+    --color-primary: var(--color-aqua-primary);
+    --color-secondary: var(--color-aqua-secondary);
+    --color-accent: var(--color-aqua-accent);
+    --color-header: rgba(var(--color-aqua-header));
+  }
   html {
     @apply min-h-full font-sans scroll-smooth;
   }

@@ -1,10 +1,25 @@
 import React from "react";
 import computer from "../images/hero/computer.png";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "classicBlackAndWhite"
+  );
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.body.classList = "";
+    document.body.classList.add(
+      theme,
+      "bg-[var(--color-primary)]",
+      "text-[var(--color-text)]"
+    );
+  }, [theme]);
+
   return (
     <section className="flex flex-col items-center" id="intro">
       <div>
@@ -27,14 +42,14 @@ const Hero = () => {
             <a
               href="https://github.com/KevinChristopherMorco"
               target="_blank"
-              className="w-1/3 p-2 bg-accent text-primary text-center"
+              className="w-1/3 p-2 bg-[var(--color-accent)] text-[var(--color-text-accent)] text-center"
             >
               <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/kevin-christopher-morco-a9a361289/"
               target="__blank"
-              className="w-2/5 p-2 text-center border border-accent"
+              className="w-2/5 p-2 text-center border border-[var(--color-accent)]"
             >
               <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
             </a>
@@ -47,10 +62,30 @@ const Hero = () => {
             Choose a theme that suits your preference.
           </p>
           <div className="flex justify-evenly">
-            <div className="w-5 h-5 bg-black rounded-full border-2 border-accent"></div>
-            <div className="w-5 h-5 bg-gray-200 rounded-full"></div>
-            <div className="w-5 h-5 bg-orange-300 rounded-full"></div>
-            <div className="w-5 h-5 bg-cyan-200 rounded-full"></div>
+            <div
+              className="w-4 h-4 bg-[#000] rounded-full border-2 border-accent"
+              onClick={() => setTheme("classicBlackAndWhite")}
+            ></div>
+            <div
+              className="w-4 h-4 bg-[#7b34d4] rounded-full"
+              onClick={() => setTheme("twilightBliss")}
+            ></div>
+            <div
+              className="w-4 h-4 bg-[#e44a40] rounded-full"
+              onClick={() => setTheme("bloodMoon")}
+            ></div>
+            <div
+              className="w-4 h-4 bg-[#428439] rounded-full"
+              onClick={() => setTheme("rainforestExplore")}
+            ></div>
+            <div
+              className="w-4 h-4 bg-[#12CEF7] rounded-full"
+              onClick={() => setTheme("blessedAqua")}
+            ></div>
+            <div
+              className="w-4 h-4 bg-[#fff] rounded-full"
+              onClick={() => setTheme("classicWhiteAndBlack")}
+            ></div>
           </div>
         </div>
       </div>

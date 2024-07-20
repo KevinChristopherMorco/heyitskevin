@@ -11,10 +11,10 @@ const Hamburger = ({ isActive, setActive }) => {
       }`}
     >
       <div
-        className={`w-3/5 h-full fixed transition-all ease-in-out delay-50	bg-primary text-accent
+        className={`w-3/5 h-full fixed transition-all ease-in-out delay-50 bg-[var(--color-primary)] text-[var(--color-text)]
         ${isActive ? "right-0" : "-right-full"}`}
       >
-        <div className="flex px-6 py-5 justify-between items-center border-b border-gray-100">
+        <div className="flex px-6 py-5 justify-between items-center border-b border-[var(--color-text)]">
           <div className="cursor-pointer" onClick={() => setActive(false)}>
             <IconX />
           </div>

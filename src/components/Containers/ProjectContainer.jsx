@@ -5,7 +5,11 @@ import project from "../../projects/projects";
 const ProjectContainer = () => {
   return (
     <section className="flex flex-col gap-y-12" id="projects">
-      <p className="text-3xl font-bold">Projects</p>
+      <div className="flex items-center gap-x-4">
+        <div className="w-10 border-t-2 border-[var(--color-accent)]"></div>
+        <p className="text-3xl font-bold">Projects </p>
+        <div className="w-10 border-t-2 border-[var(--color-accent)]"></div>
+      </div>{" "}
       <div className="flex flex-col gap-y-20">
         {project.map((project, index) => {
           return (
