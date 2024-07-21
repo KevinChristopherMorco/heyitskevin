@@ -42,7 +42,7 @@ const Hero = () => {
             <a
               href="https://github.com/KevinChristopherMorco"
               target="_blank"
-              className="w-1/3 p-2 bg-[var(--color-accent)] text-[var(--color-text-accent)] text-center"
+              className="w-1/3 p-2 bg-[var(--color-accent)] text-[var(--color-text-accent)] text-center transition ease-in-out hover:scale-110"
             >
               <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>

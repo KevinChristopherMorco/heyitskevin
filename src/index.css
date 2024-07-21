@@ -16,6 +16,7 @@
     --color-dark-secondary: #070707;
     --color-dark-accent: #fff;
     --color-dark-header: 0, 0, 0, 0.4;
+    --color-dark-footer: 255, 255, 255, 0.5;
 
     --color-twilight-text: #fff;
     --color-twilight-text-accent: #fff;
@@ -23,6 +24,7 @@
     --color-twilight-secondary: #1f1522;
     --color-twilight-accent: #7b34d4;
     --color-twilight-header: 123, 52, 212, 0.4;
+    --color-twilight-footer: 255, 255, 255, 0.5;
 
     --color-blood-text: #fff;
     --color-blood-text-accent: #fff;
@@ -30,6 +32,7 @@
     --color-blood-secondary: #a30000;
     --color-blood-accent: #e44a40;
     --color-blood-header: 228, 74, 64, 0.4;
+    --color-blood-footer: 255, 255, 255, 0.5;
 
     --color-white-text: #000;
     --color-white-text-accent: #fff;
@@ -37,6 +40,7 @@
     --color-white-secondary: #f8f8f8;
     --color-white-accent: #000;
     --color-white-header: 255, 255, 255, 0.4;
+    --color-white-footer: 0, 0, 0, 0.6;
 
     --color-rainforest-text: #00644d;
     --color-rainforest-text-accent: #fff;
@@ -44,13 +48,15 @@
     --color-rainforest-secondary: #d7ddcc;
     --color-rainforest-accent: #528439;
     --color-rainforest-header: 82, 132, 57, 0.4;
+    --color-rainforest-footer: 0, 100, 77, 0.8;
 
     --color-aqua-text: #03002d;
-    --color-aqua-text-accent: #04233c;
+    --color-aqua-text-accent: #fff;
     --color-aqua-primary: #cffcf9;
     --color-aqua-secondary: #c2ecea;
-    --color-aqua-accent: #12cef7;
-    --color-aqua-header: 18, 206, 247, 0.4;
+    --color-aqua-accent: #108fac;
+    --color-aqua-header: 16, 143, 172, 0.4;
+    --color-aqua-footer: 3, 0, 45, 0.6;
   }
 
   .classicBlackAndWhite {
@@ -60,6 +66,7 @@
     --color-secondary: var(--color-dark-secondary);
     --color-accent: var(--color-dark-accent);
     --color-header: rgba(var(--color-dark-header));
+    --color-footer: rgba(var(--color-dark-footer));
   }
 
   .twilightBliss {
@@ -69,6 +76,7 @@
     --color-secondary: var(--color-twilight-secondary);
     --color-accent: var(--color-twilight-accent);
     --color-header: rgba(var(--color-twilight-header));
+    --color-footer: rgba(var(--color-twilight-footer));
   }
 
   .bloodMoon {
@@ -78,6 +86,7 @@
     --color-secondary: var(--color-blood-secondary);
     --color-accent: var(--color-blood-accent);
     --color-header: rgba(var(--color-blood-header));
+    --color-footer: rgba(var(--color-blood-footer));
   }
 
   .classicWhiteAndBlack {
@@ -87,6 +96,7 @@
     --color-secondary: var(--color-white-secondary);
     --color-accent: var(--color-white-accent);
     --color-header: rgba(var(--color-white-header));
+    --color-footer: rgba(var(--color-white-footer));
   }
 
   .rainforestExplore {
@@ -96,6 +106,7 @@
     --color-secondary: var(--color-rainforest-secondary);
     --color-accent: var(--color-rainforest-accent);
     --color-header: rgba(var(--color-rainforest-header));
+    --color-footer: rgba(var(--color-rainforest-footer));
   }
 
   .blessedAqua {
@@ -105,6 +116,7 @@
     --color-secondary: var(--color-aqua-secondary);
     --color-accent: var(--color-aqua-accent);
     --color-header: rgba(var(--color-aqua-header));
+    --color-footer: rgba(var(--color-aqua-footer));
   }
   html {
     @apply min-h-full font-sans scroll-smooth;
@@ -122,4 +134,10 @@
     src: local("Roboto"),
       url(../src/fonts/RobotoMono-Medium.ttf) format("truetype");
   }
+
+  /* @font-face {
+    font-family: "Lexend";
+    src: local("Lexend"),
+      url(../src/fonts/Lexend-Regular.ttf) format("truetype");
+  } */
 }

@@ -80,7 +80,7 @@ const Card = ({
         <a
           href={liveLink}
           target="__blank"
-          className="w-1/2 p-2 flex justify-evenly items-center bg-[var(--color-accent)] text-[var(--color-text-accent)] text-center font-bold"
+          className="w-1/2 p-2 flex justify-evenly items-center bg-[var(--color-accent)] text-[var(--color-text-accent)] text-center font-bold transition ease-in-out hover:scale-105"
         >
           <IconDeviceGamepad2 size={20} /> Live Site
         </a>
