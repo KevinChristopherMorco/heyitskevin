@@ -31,13 +31,13 @@ const Footer = () => {
   }, 1000);
 
   return (
-    <footer className="py-5 px-4 flex flex-col gap-y-10 text-3xl" id="contacts">
+    <footer className="py-5 px-4 flex flex-col gap-y-10" id="contacts">
       <div className="flex items-center gap-x-4">
         <div className="w-10 border-t-2 border-[var(--color-accent)]"></div>
-        <p className="text-3xl font-bold">Connect </p>
+        <p className="text-3xl font-bold md:text-4xl">Connect </p>
         <div className="w-10 border-t-2 border-[var(--color-accent)]"></div>
       </div>
-      <div className="mb-10">
+      <div className="mb-10 text-3xl md:text-5xl">
         <p>Hey there!</p>
         <p>
           Got a question, or just want to <span>say hi?</span>
@@ -49,8 +49,8 @@ const Footer = () => {
       </div>
       <div className="flex flex-col gap-y-10">
         <div className="flex flex-col gap-y-8">
-          <p className="text-xl font-bold">Join me at Codewars!</p>
-          <p className="text-lg">
+          <p className="text-xl font-bold md:text-3xl">Join me at Codewars!</p>
+          <p className="text-lg md:text-xl">
             Here, you’ll find a collection of my coding adventures and
             problem-solving quests. Usually I spend an hour everyday on cracking
             code challenges to test my problem solving skill, I've only started
@@ -66,8 +66,10 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-col gap-y-8">
-          <p className="text-xl font-bold">Journey at Frontend Mentor</p>
-          <p className="text-lg">
+          <p className="text-xl font-bold md:text-3xl">
+            Journey at Frontend Mentor
+          </p>
+          <p className="text-lg md:text-xl">
             This is where I’ve honed my front-end skills and tackled some
             exciting design challenges. Each project here is a piece of my
             journey into creating clean, user-friendly interfaces.
@@ -75,16 +77,19 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col gap-y-2 text-base text-center">
-        <p className="italic">
+        <p className="text-base italic md:text-lg">
           "The greatest virtue of man is perhaps curiosity"
         </p>
-        <p className="font-bold">Anatole France</p>
+        <p className="text-base font-bold md:text-lg">Anatole France</p>
       </div>
       <div className="flex flex-col gap-y-2 text-[var(--color-footer)]">
         <ul className="flex justify-center gap-x-8 text-3xl">
           <li className="py-2">
             <a href="https://github.com/KevinChristopherMorco" target="_blank">
-              <FontAwesomeIcon icon={faGithub} />
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="w-6 h-6 md:w-8 md:h-8"
+              />
             </a>
           </li>
           <li className="py-2">
@@ -92,25 +97,34 @@ const Footer = () => {
               href="https://www.linkedin.com/in/kevin-christopher-morco-a9a361289/"
               target="__blank"
             >
-              <FontAwesomeIcon icon={faLinkedin} />
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className="w-6 h-6 md:w-8 md:h-8"
+              />
             </a>
           </li>
           <li className="py-2">
             <a href="https://discordapp.com/users/kevinnnn02" target="_blank">
-              <FontAwesomeIcon icon={faDiscord} />
+              <FontAwesomeIcon
+                icon={faDiscord}
+                className="w-6 h-6 md:w-8 md:h-8"
+              />
             </a>
           </li>
           <li className="py-2">
             <a href="https://www.facebook.com/kevin.morco.5/" target="_blank">
-              <FontAwesomeIcon icon={faFacebookMessenger} />
+              <FontAwesomeIcon
+                icon={faFacebookMessenger}
+                className="w-6 h-6 md:w-8 md:h-8"
+              />
             </a>
           </li>
         </ul>
-        <p className="text-base text-center">
+        <p className="text-base text-center md:text-lg">
           Developed and Styled by Kevin Morco
         </p>
-        <div className="flex justify-center items-center text-sm gap-x-4 ">
-          <IconCopyright size={20} />
+        <div className="flex justify-center items-center text-sm gap-x-4 md:text-base">
+          <IconCopyright className="md:w-6 md:h-6" />
           {localTime}
         </div>
       </div>

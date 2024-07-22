@@ -25,13 +25,13 @@ function App() {
   return (
     <>
       <Header setActive={menuState} />
-      <div className="px-5 flex flex-col gap-y-32">
+      <div className="px-5 flex flex-col gap-y-60">
         <Hero />
         <About />
-        <Skills />
         <ProjectContainer />
       </div>
       <Footer />
+
       <Hamburger isActive={isActive} setActive={menuState} />
     </>
   );

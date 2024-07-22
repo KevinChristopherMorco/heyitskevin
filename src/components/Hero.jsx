@@ -21,21 +21,30 @@ const Hero = () => {
   }, [theme]);
 
   return (
-    <section className="flex flex-col items-center" id="intro">
-      <div>
-        <img src={computer} alt="Computer" className="w-72 h-72" />
+    <section
+      className="mt-[15vh] flex flex-col items-center md:flex-row-reverse md:justify-between"
+      id="intro"
+    >
+      <div className="flex justify-center md:basis-[40%]">
+        <img
+          src={computer}
+          alt="Computer"
+          className="w-72 h-72 md:w-80 md:h-80"
+        />
       </div>
-      <div className="flex flex-col gap-y-8">
-        <div className="flex flex-wrap justify-evenly items-center gap-y-6 text-3xl text-center font-bold">
+      <div className="flex flex-col gap-y-20 md:basis-[60%]">
+        <div className="flex flex-wrap justify-evenly items-center gap-y-6 text-3xl text-center font-bold md:text-4xl md:gap-x-4">
           <p>Discover.</p>
           <p>Visualize.</p>
           <p>Develop.</p>
         </div>
-        <div className="my-14 flex flex-col gap-y-6 text-center">
-          <p className="text-small font-bold">Hi there,</p>
-          <p className="text-2xl font-bold">I'm Kevin Morco.</p>
-          <p className="text-2xl font-bold">Dedicated Web Developer</p>
-          <div className="italic">
+        <div className="flex flex-col gap-y-6 text-center">
+          <p className="text-small font-bold md:text-lg">Hi there,</p>
+          <p className="text-2xl font-bold md:text-3xl">I'm Kevin Morco.</p>
+          <p className="text-2xl font-bold md:text-3xl">
+            Dedicated Web Developer
+          </p>
+          <div className="italic md:text-lg">
             <p>Passionate about Programming and Continuous Learning.</p>
           </div>
           <div className="my-2 flex justify-around items-center">
@@ -63,27 +72,27 @@ const Hero = () => {
           </p>
           <div className="flex justify-evenly">
             <div
-              className="w-4 h-4 bg-[#000] rounded-full border-2 border-accent"
+              className="w-4 h-4 bg-[#000] rounded-full border-2 border-accent md:w-6 md:h-6"
               onClick={() => setTheme("classicBlackAndWhite")}
             ></div>
             <div
-              className="w-4 h-4 bg-[#7b34d4] rounded-full"
+              className="w-4 h-4 bg-[#7b34d4] rounded-full md:w-6 md:h-6"
               onClick={() => setTheme("twilightBliss")}
             ></div>
             <div
-              className="w-4 h-4 bg-[#e44a40] rounded-full"
+              className="w-4 h-4 bg-[#e44a40] rounded-full md:w-6 md:h-6"
               onClick={() => setTheme("bloodMoon")}
             ></div>
             <div
-              className="w-4 h-4 bg-[#428439] rounded-full"
+              className="w-4 h-4 bg-[#428439] rounded-full md:w-6 md:h-6"
               onClick={() => setTheme("rainforestExplore")}
             ></div>
             <div
-              className="w-4 h-4 bg-[#12CEF7] rounded-full"
+              className="w-4 h-4 bg-[#12CEF7] rounded-full md:w-6 md:h-6"
               onClick={() => setTheme("blessedAqua")}
             ></div>
             <div
-              className="w-4 h-4 bg-[#fff] rounded-full"
+              className="w-4 h-4 bg-[#fff] rounded-full md:w-6 md:h-6"
               onClick={() => setTheme("classicWhiteAndBlack")}
             ></div>
           </div>

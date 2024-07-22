@@ -19,8 +19,8 @@ const Card = ({
   projectStack,
 }) => {
   return (
-    <div className="min-h-96 flex flex-col justify-between gap-y-6 bg-[var(--color-secondary)] rounded-lg">
-      <div className="h-72">
+    <div className="min-h-96 flex flex-col justify-between gap-y-6 bg-[var(--color-secondary)] rounded-lg md:w-[45%]">
+      <div className="h-72 md:h-52">
         <img
           src={require(`../images/project-card/${image}`)}
           alt="image"
@@ -29,13 +29,13 @@ const Card = ({
       </div>
       <div className="p-4 flex flex-col gap-y-8">
         <div className="text-center">
-          <div className="flex flex-col gap-y-2">
-            <p className="text-xl font-semibold">{title}</p>
-            <p className="text-sm">{subTitle}</p>
+          <div className="flex flex-col gap-y-4">
+            <p className="text-xl font-semibold md:text-2xl">{title}</p>
+            <p className="text-sm md:text-base">{subTitle}</p>
           </div>
         </div>
         <div className="text-center">
-          <p>{description}</p>
+          <p className="text-base md:text-xl">{description}</p>
         </div>
         <ul className="flex flex-wrap justify-around gap-y-6">
           {projectStack.map((stack, index) => {
@@ -43,31 +43,31 @@ const Card = ({
               case "javascript":
                 return (
                   <li key={index} className="text-js">
-                    <IconBrandJavascript size={40} />
+                    <IconBrandJavascript className="w-10 h-10" />
                   </li>
                 );
               case "css":
                 return (
                   <li key={index} className="text-css">
-                    <IconBrandCss3 size={40} />
+                    <IconBrandCss3 className="w-10 h-10" />
                   </li>
                 );
               case "html":
                 return (
                   <li key={index} className="text-html">
-                    <IconBrandHtml5 size={40} />
+                    <IconBrandHtml5 className="w-10 h-10" />
                   </li>
                 );
               case "react":
                 return (
                   <li key={index} className="text-react">
-                    <IconBrandReact size={40} />
+                    <IconBrandReact className="w-10 h-10" />
                   </li>
                 );
               case "tailwind":
                 return (
                   <li key={index} className="text-tailwind">
-                    <IconBrandTailwind size={40} />
+                    <IconBrandTailwind className="w-10 h-10" />
                   </li>
                 );
               default:

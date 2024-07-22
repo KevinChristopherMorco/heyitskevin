@@ -29,9 +29,6 @@ const Hamburger = ({ isActive, setActive }) => {
           <a href="#about" onClick={() => setActive(false)}>
             About
           </a>
-          <a href="#skills" onClick={() => setActive(false)}>
-            Tech Stacks
-          </a>
           <a href="#projects" onClick={() => setActive(false)}>
             Projects
           </a>
