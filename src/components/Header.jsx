@@ -3,7 +3,7 @@ import { IconMenu2, IconLanguageHiragana } from "@tabler/icons-react";
 
 import logo from "../images/logo/logo.png";
 
-const Header = ({ setActive }) => {
+const Header = ({ setActive, theme }) => {
   return (
     <header className="fixed w-[90%] left-1/2 -translate-x-1/2 md:w-[80%]">
       <nav className="bg-[var(--color-header)] text-accent border-2 border-[var(--color-accent)] rounded-xl">
@@ -25,7 +25,14 @@ const Header = ({ setActive }) => {
           <div className="m-4">
             <img src={logo} className="h-8 w-8" />
           </div>
-          <div className="w-3/4 px-6 flex justify-evenly text-lg">
+          <div
+            className={`w-3/4 px-6 flex justify-evenly text-lg ${
+              theme === "classicBlackAndWhite" ||
+              theme === "classicWhiteAndBlack"
+                ? "text-[var(--color-accent)]"
+                : "text-[var(--color-text-accent)]"
+            }`}
+          >
             <a href="#intro">Intro</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>

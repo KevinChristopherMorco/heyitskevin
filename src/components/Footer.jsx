@@ -32,11 +32,9 @@ const Footer = () => {
 
   return (
     <footer className="py-5 px-4 flex flex-col gap-y-10" id="contacts">
-      <div className="flex items-center gap-x-4">
-        <div className="w-10 border-t-2 border-[var(--color-accent)]"></div>
-        <p className="text-3xl font-bold md:text-4xl">Connect </p>
-        <div className="w-10 border-t-2 border-[var(--color-accent)]"></div>
-      </div>
+      <p className="mb-6 flex items-center gap-x-4 text-3xl font-bold before:h-[0.2rem] before:w-[3rem] before:bg-[var(--color-accent)] after:h-[0.2rem] after:w-[3rem] after:bg-[var(--color-accent)] md:text-4xl md:before:hidden md:after:w-[20rem] lg:mb-32 lg:after:w-[36rem] lg:text-5xl ">
+        Connect
+      </p>
       <div className="mb-10 text-3xl md:text-5xl">
         <p>Hey there!</p>
         <p>
@@ -120,10 +118,10 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <p className="text-base text-center md:text-lg">
+        <p className="text-base text-center md:text-lg xl:text-lg 2xl:text-xl">
           Developed and Styled by Kevin Morco
         </p>
-        <div className="flex justify-center items-center text-sm gap-x-4 md:text-base">
+        <div className="flex justify-center items-center text-sm gap-x-4 md:text-base xl:text-lg 2xl:text-xl">
           <IconCopyright className="md:w-6 md:h-6" />
           {localTime}
         </div>

@@ -11,6 +11,19 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [isActive, setActive] = useState(false);
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "classicBlackAndWhite"
+  );
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.body.classList = "";
+    document.body.classList.add(
+      theme,
+      "bg-[var(--color-primary)]",
+      "text-[var(--color-text)]"
+    );
+  }, [theme]);
 
   const menuState = (state) => {
     setActive(state);
@@ -24,13 +37,13 @@ function App() {
 
   return (
     <>
-      <Header setActive={menuState} />
-      <div className="px-5 flex flex-col gap-y-60">
-        <Hero />
+      <Header setActive={menuState} theme={theme} />
+      <div className="px-5 flex flex-col gap-y-60 lg:px-8 xl:px-28 2xl:px-64">
+        <Hero setTheme={setTheme} />
         <About />
         <ProjectContainer />
+        <Footer />
       </div>
-      <Footer />
 
       <Hamburger isActive={isActive} setActive={menuState} />
     </>

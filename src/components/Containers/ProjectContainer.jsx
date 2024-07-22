@@ -4,13 +4,11 @@ import project from "../../projects/projects";
 
 const ProjectContainer = () => {
   return (
-    <section className="flex flex-col gap-y-12" id="projects">
-      <div className="flex items-center gap-x-4">
-        <div className="w-10 border-t-2 border-[var(--color-accent)]"></div>
-        <p className="text-3xl font-bold md:text-4xl">Projects </p>
-        <div className="w-10 border-t-2 border-[var(--color-accent)]"></div>
-      </div>{" "}
-      <div className="flex flex-col gap-y-20 md:flex-row flex-wrap md:justify-around">
+    <section className="flex flex-col gap-y-20" id="projects">
+      <p className="mb-6 flex items-center gap-x-4 text-3xl font-bold before:h-[0.2rem] before:w-[3rem] before:bg-[var(--color-accent)] after:h-[0.2rem] after:w-[3rem] after:bg-[var(--color-accent)] md:text-4xl md:before:hidden md:after:w-[20rem] lg:mb-32 lg:after:w-[36rem] lg:text-5xl ">
+        Projects
+      </p>
+      <div className="flex flex-col gap-y-20 md:flex-row flex-wrap md:justify-around xl:justify-between">
         {project.map((project, index) => {
           return (
             <Card

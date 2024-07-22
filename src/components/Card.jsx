@@ -20,54 +20,56 @@ const Card = ({
 }) => {
   return (
     <div className="min-h-96 flex flex-col justify-between gap-y-6 bg-[var(--color-secondary)] rounded-lg md:w-[45%]">
-      <div className="h-72 md:h-52">
+      <div className="h-72 md:h-52 xl:h-96">
         <img
           src={require(`../images/project-card/${image}`)}
           alt="image"
           className="w-full h-full rounded-lg"
         />
       </div>
-      <div className="p-4 flex flex-col gap-y-8">
+      <div className="p-4 flex flex-col gap-y-8 xl:gap-y-16">
         <div className="text-center">
           <div className="flex flex-col gap-y-4">
-            <p className="text-xl font-semibold md:text-2xl">{title}</p>
-            <p className="text-sm md:text-base">{subTitle}</p>
+            <p className="text-xl font-semibold md:text-2xl 2xl:text-3xl">
+              {title}
+            </p>
+            <p className="text-sm md:text-base 2xl:text-lg">{subTitle}</p>
           </div>
         </div>
         <div className="text-center">
           <p className="text-base md:text-xl">{description}</p>
         </div>
-        <ul className="flex flex-wrap justify-around gap-y-6">
+        <ul className="flex flex-wrap justify-evenly gap-y-6">
           {projectStack.map((stack, index) => {
             switch (stack) {
               case "javascript":
                 return (
                   <li key={index} className="text-js">
-                    <IconBrandJavascript className="w-10 h-10" />
+                    <IconBrandJavascript className="w-10 h-10 xl:w-12 xl:h-12" />
                   </li>
                 );
               case "css":
                 return (
                   <li key={index} className="text-css">
-                    <IconBrandCss3 className="w-10 h-10" />
+                    <IconBrandCss3 className="w-10 h-10 xl:w-12 xl:h-12" />
                   </li>
                 );
               case "html":
                 return (
                   <li key={index} className="text-html">
-                    <IconBrandHtml5 className="w-10 h-10" />
+                    <IconBrandHtml5 className="w-10 h-10 xl:w-12 xl:h-12" />
                   </li>
                 );
               case "react":
                 return (
                   <li key={index} className="text-react">
-                    <IconBrandReact className="w-10 h-10" />
+                    <IconBrandReact className="w-10 h-10 xl:w-12 xl:h-12" />
                   </li>
                 );
               case "tailwind":
                 return (
                   <li key={index} className="text-tailwind">
-                    <IconBrandTailwind className="w-10 h-10" />
+                    <IconBrandTailwind className="w-10 h-10 xl:w-12 xl:h-12" />
                   </li>
                 );
               default:
@@ -76,7 +78,7 @@ const Card = ({
           })}
         </ul>
       </div>
-      <div className="py-4 flex justify-around">
+      <div className="py-4 flex justify-around xl:text-xl">
         <a
           href={liveLink}
           target="__blank"
