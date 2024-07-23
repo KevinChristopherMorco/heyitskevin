@@ -2,14 +2,20 @@ import React from "react";
 import author from "../images/author/grad-pic.png";
 
 import {
+  IconBrandAdobePhotoshop,
   IconBrandBootstrap,
   IconBrandCss3,
+  IconBrandFigma,
   IconBrandGit,
   IconBrandHtml5,
   IconBrandJavascript,
   IconBrandReact,
   IconBrandTailwind,
+  IconBrandVisualStudio,
 } from "@tabler/icons-react";
+
+import development from "../images/about-card/web-development.png";
+import graphics from "../images/about-card/graphic-design.png";
 
 const About = () => {
   return (
@@ -32,8 +38,8 @@ const About = () => {
           skills further.
         </p>
       </div>
-      <div className="flex flex-col gap-y-10">
-        <p className="text-3xl lg:text-4xl">Tech Stacks </p>
+      <div className="flex flex-col gap-y-14">
+        <p className="text-2xl lg:text-4xl">Tech Stacks </p>
         <ul className="flex flex-wrap items-center gap-x-8 gap-y-10 text-base font-semibold md:text-2xl md:gap-x-10 lg:text-3xl lg:gap-x-16 xl:gap-x-20">
           <li className="flex items-center gap-x-2 xl:gap-x-4">
             <span className="text-js">
@@ -78,6 +84,63 @@ const About = () => {
             Bootstrap
           </li>
         </ul>
+        <p className="text-2xl lg:text-4xl">Softwares </p>
+        <ul className="flex flex-wrap items-center gap-x-8 gap-y-10 text-base font-semibold md:text-2xl md:gap-x-10 lg:text-3xl lg:gap-x-16 xl:gap-x-20">
+          <li className="flex items-center gap-x-2 xl:gap-x-4">
+            <span className="text-photoshop">
+              <IconBrandVisualStudio className="md:w-12 md:h-12 lg:w-14 lg:h-14" />
+            </span>
+            Visual Studio
+          </li>
+          <li className="flex items-center gap-x-2 xl:gap-x-4">
+            <span className="text-git">
+              <IconBrandGit className="md:w-12 md:h-12 lg:w-14 lg:h-14" />
+            </span>
+            Bash
+          </li>
+          <li className="flex items-center gap-x-2 xl:gap-x-4">
+            <span className="text-photoshop">
+              <IconBrandAdobePhotoshop className="md:w-12 md:h-12 lg:w-14 lg:h-14" />
+            </span>
+            Photoshop
+          </li>
+          <li className="flex items-center gap-x-2 xl:gap-x-4">
+            <span className="text-figma">
+              <IconBrandFigma className="md:w-12 md:h-12 lg:w-14 lg:h-14" />
+            </span>
+            Figma
+          </li>
+        </ul>
+      </div>
+
+      <div className="flex flex-col gap-y-14">
+        <p className="text-2xl lg:text-4xl">Skills </p>
+        <div className="flex flex-col gap-y-32">
+          <div className="flex flex-col gap-y-10 text-center">
+            <p className="text-xl font-500">Web Design and Development</p>
+            <p>
+              I'm passionate about creating beautiful and user-friendly web
+              designs that makes browsing a smooth experience for the users.
+              Whether it's building a responsive layout or adding dynamic
+              features, I enjoy every step of the process and strive to deliver
+              websites that not only look great but also perform flawlessly.
+              Currently using HTML5, CSS3 and JavaScript
+            </p>
+            <img src={development} alt="Web Development" />
+          </div>
+
+          <div className="flex flex-col gap-y-10 text-center">
+            <p className="text-xl font-500">Graphic Design</p>
+            <p>
+              In addition to my web design and development skills, I enjoy doing
+              graphic designs. I like to create eye-catching thumbnails and
+              posters that effectively communicate the intended message and
+              captivate the audience. Since having a great graphics design
+              increases user engagement.
+            </p>
+            <img src={graphics} alt="Web Development" />
+          </div>
+        </div>
       </div>
     </section>
   );

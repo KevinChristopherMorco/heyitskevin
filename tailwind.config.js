@@ -18,6 +18,8 @@ module.exports = {
         tailwind: "#15B8C5",
         bootstrap: "#7910F2",
         git: "#E94E31",
+        photoshop: "#30A7FE",
+        figma: "#E44A40",
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
