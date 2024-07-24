@@ -5,7 +5,7 @@ import logo from "../images/logo/logo.png";
 
 const Header = ({ setActive, theme }) => {
   return (
-    <header className="fixed w-[90%] left-1/2 -translate-x-1/2 md:w-[80%]">
+    <header className="fixed w-[90%] left-1/2 -translate-x-1/2 md:w-[80%] z-[999]">
       <nav className="bg-[var(--color-header)] text-accent border-2 border-[var(--color-accent)] rounded-xl">
         <div className="flex justify-between items-stretch md:hidden">
           <div className="m-4">

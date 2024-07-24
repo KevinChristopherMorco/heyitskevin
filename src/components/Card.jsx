@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import {
   IconDeviceGamepad2,
   IconTerminal2,
@@ -9,17 +9,15 @@ import {
   IconBrandTailwind,
 } from "@tabler/icons-react";
 
-const Card = ({
-  image,
-  title,
-  subTitle,
-  description,
-  liveLink,
-  sourceLink,
-  projectStack,
-}) => {
+const Card = forwardRef(function MyInput(
+  { image, title, subTitle, description, liveLink, sourceLink, projectStack },
+  ref
+) {
   return (
-    <div className="min-h-96 flex flex-col justify-between gap-y-6 bg-[var(--color-secondary)] rounded-lg md:w-[45%]">
+    <div
+      ref={ref}
+      className="defaultSlideInView min-h-96 flex flex-col justify-between gap-y-6 bg-[var(--color-secondary)] rounded-lg md:w-[45%]"
+    >
       <div className="h-72 md:h-52 xl:h-96">
         <img
           src={require(`../images/project-card/${image}`)}
@@ -96,6 +94,6 @@ const Card = ({
       </div>
     </div>
   );
-};
+});
 
 export default Card;

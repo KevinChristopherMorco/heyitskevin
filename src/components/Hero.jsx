@@ -19,11 +19,11 @@ const Hero = ({ setTheme }) => {
         />
       </div>
       <div className="flex flex-col gap-y-20 md:basis-[60%]">
-        <div className="flex flex-wrap justify-evenly items-center gap-y-6 text-3xl text-center font-bold md:text-4xl md:gap-x-4 xl:text-5xl 2xl:text-6xl">
+        {/* <div className="flex flex-wrap justify-evenly items-center gap-y-6 text-3xl text-center font-bold md:text-4xl md:gap-x-4 xl:text-5xl 2xl:text-6xl">
           <p>Discover.</p>
           <p>Visualize.</p>
           <p>Develop.</p>
-        </div>
+        </div> */}
         <div className="flex flex-col gap-y-6 text-center">
           <p className="text-small font-bold md:text-lg xl:text-xl">
             Hi there,

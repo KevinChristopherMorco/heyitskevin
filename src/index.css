@@ -9,6 +9,28 @@
 }
 
 @layer base {
+  html {
+    @apply min-h-full font-sans scroll-smooth;
+  }
+  body {
+    @apply bg-primary min-h-screen text-accent;
+  }
+
+  #root {
+    @apply min-h-screen flex flex-col justify-between gap-y-20 relative;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: local("Roboto"),
+      url(../src/fonts/RobotoMono-Medium.ttf) format("truetype");
+  }
+
+  /* @font-face {
+    font-family: "Lexend";
+    src: local("Lexend"),
+      url(../src/fonts/Lexend-Regular.ttf) format("truetype");
+  } */
   :root {
     --color-dark-text: #fff;
     --color-dark-text-accent: #000;
@@ -118,26 +140,20 @@
     --color-header: rgba(var(--color-aqua-header));
     --color-footer: rgba(var(--color-aqua-footer));
   }
-  html {
-    @apply min-h-full font-sans scroll-smooth;
-  }
-  body {
-    @apply bg-primary min-h-screen text-accent;
+
+  .defaultSlideInView {
+    @apply opacity-0 -translate-x-32 transition delay-150 duration-300 ease-in-out;
   }
 
-  #root {
-    @apply min-h-screen flex flex-col justify-between gap-y-20 relative;
+  .defaultSlideUpView {
+    @apply opacity-0 translate-y-32 transition delay-300 duration-300 ease-in-out;
   }
 
-  @font-face {
-    font-family: "Roboto";
-    src: local("Roboto"),
-      url(../src/fonts/RobotoMono-Medium.ttf) format("truetype");
+  .animateSlideIn {
+    @apply opacity-100 translate-x-0;
   }
 
-  /* @font-face {
-    font-family: "Lexend";
-    src: local("Lexend"),
-      url(../src/fonts/Lexend-Regular.ttf) format("truetype");
-  } */
+  .animateSlideUp {
+    @apply opacity-100 translate-y-0;
+  }
 }
