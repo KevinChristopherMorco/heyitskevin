@@ -117,7 +117,9 @@ const About = () => {
         <p className="text-2xl lg:text-4xl">Skills </p>
         <div className="flex flex-col gap-y-32">
           <div className="flex flex-col gap-y-10 text-center">
-            <p className="text-xl font-500">Web Design and Development</p>
+            <p className="text-xl font-500 md:text-2xl">
+              Web Design and Development
+            </p>
             <p>
               I'm passionate about creating beautiful and user-friendly web
               designs that makes browsing a smooth experience for the users.
@@ -130,7 +132,7 @@ const About = () => {
           </div>
 
           <div className="flex flex-col gap-y-10 text-center">
-            <p className="text-xl font-500">Graphic Design</p>
+            <p className="text-xl font-500 md:text-2xl">Graphic Design</p>
             <p>
               In addition to my web design and development skills, I enjoy doing
               graphic designs. I like to create eye-catching thumbnails and

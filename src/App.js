@@ -7,7 +7,7 @@ import Skills from "./components/Skills";
 import ProjectContainer from "./components/Containers/ProjectContainer";
 import Hamburger from "./components/Hamburger";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function App() {
   const [isActive, setActive] = useState(false);
