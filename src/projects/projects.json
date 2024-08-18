@@ -1,5 +1,15 @@
 [
   {
+    "image": "country-app.png",
+    "title": "Where in the world?",
+    "subtitle": "Mini Project",
+    "information": "Find interesting facts about every country in the world! ",
+    "stack": ["fa-html5", "fa-css3", "fa-square-js", "fa-react"],
+    "gitRef": "https://github.com/KevinChristopherMorco/our-homeland",
+    "liveRef": "https://keeper-puce.vercel.app/",
+    "liveSite": true
+  },
+  {
     "image": "keeper-app.png",
     "title": "Keeper",
     "subtitle": "Mini Project",

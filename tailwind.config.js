@@ -28,6 +28,15 @@ module.exports = {
         width: "width",
         margin: "margin",
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0", transform: "translate(0, 1.5rem)" },
+          "100%": { opacity: "1", transform: "translate(0)" },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 2s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

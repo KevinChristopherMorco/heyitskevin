@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
 import {
   IconDeviceGamepad2,
   IconTerminal2,
@@ -9,7 +9,7 @@ import {
   IconBrandTailwind,
 } from "@tabler/icons-react";
 
-const Card = forwardRef(function MyInput(
+const Card = forwardRef(function Card(
   { image, title, subTitle, description, liveLink, sourceLink, projectStack },
   ref
 ) {

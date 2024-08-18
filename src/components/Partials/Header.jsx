@@ -1,9 +1,11 @@
 import React from "react";
+import { useThemeContext } from "../../hooks/Providers/ThemeProvider";
 import { IconMenu2, IconLanguageHiragana } from "@tabler/icons-react";
 
-import logo from "../images/logo/logo.png";
+import logo from "../../images/logo/logo.png";
 
-const Header = ({ setActive, theme }) => {
+const Header = ({ setActive }) => {
+  const { theme } = useThemeContext();
   return (
     <header className="fixed w-[90%] left-1/2 -translate-x-1/2 md:w-[80%] z-[999]">
       <nav className="bg-[var(--color-header)] text-accent border-2 border-[var(--color-accent)] rounded-xl">
@@ -14,7 +16,7 @@ const Header = ({ setActive, theme }) => {
           <div className="flex items-end">
             <button
               className="h-4/5 p-3 border-t-2 border-l-2 rounded-tl-xl border-[var(--color-accent)] text-[var(--color-text)] text-lg cursor-pointer "
-              onClick={() => setActive(true)}
+              onClick={() => setActive("hamburger", true)}
             >
               <IconMenu2 size={25} />
             </button>

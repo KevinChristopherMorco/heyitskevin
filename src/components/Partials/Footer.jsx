@@ -1,4 +1,6 @@
 import React from "react";
+import useScrollEffect from "../../hooks/useScrollEffect";
+import useCurrentTime from "../../hooks/useCurrentTime";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -9,29 +11,16 @@ import {
 
 import { IconCopyright } from "@tabler/icons-react";
 
-import { useState } from "react";
-
 const Footer = () => {
-  const [localTime, setLocalTime] = useState(null);
-  const [utcTime, setUTCTime] = useState(null);
-
-  setInterval(() => {
-    const currentDate = new Date().toLocaleTimeString("en", {
-      hour12: false,
-      month: "short",
-      day: "2-digit",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      timeZone: "Asia/Manila",
-      timeZoneName: "short",
-    });
-    setLocalTime(() => currentDate);
-  }, 1000);
+  const { addRef } = useScrollEffect("animateSlideUp");
+  const { localTime } = useCurrentTime();
 
   return (
-    <footer className="py-5 px-4 flex flex-col gap-y-10" id="contacts">
+    <footer
+      className="defaultSlideUpView py-5 px-4 flex flex-col gap-y-10"
+      id="contacts"
+      ref={addRef}
+    >
       <p className="mb-6 flex items-center gap-x-4 text-3xl font-bold before:h-[0.2rem] before:w-[3rem] before:bg-[var(--color-accent)] after:h-[0.2rem] after:w-[3rem] after:bg-[var(--color-accent)] md:text-4xl md:before:hidden md:after:w-[20rem] lg:mb-32 lg:after:w-[36rem] lg:text-5xl ">
         Connect
       </p>

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
+import useScrollEffect from "../hooks/useScrollEffect";
 import author from "../images/author/grad-pic.png";
 
 import {
@@ -18,25 +19,14 @@ import development from "../images/about-card/web-development.png";
 import graphics from "../images/about-card/graphic-design.png";
 
 const About = () => {
-  const sectionRef = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) =>
-        entry.target.classList.toggle("animateSlideUp", entry.isIntersecting)
-      );
-    });
-
-    sectionRef.current.forEach((ref) => observer.observe(ref));
-  }, [sectionRef]);
-  const addContainerRef = (el) => sectionRef.current.push(el);
+  const { addRef } = useScrollEffect("animateSlideUp");
   return (
     <section className="flex flex-col gap-y-20" id="about">
       <p className="mb-6 flex items-center gap-x-4 text-3xl font-bold before:h-[0.2rem] before:w-[3rem] before:bg-[var(--color-accent)] after:h-[0.2rem] after:w-[3rem] after:bg-[var(--color-accent)] md:text-4xl md:before:hidden md:after:w-[20rem] lg:mb-32 lg:after:w-[36rem] lg:text-5xl ">
         Who am I?
       </p>
       <div
-        ref={addContainerRef}
+        ref={addRef}
         className="defaultSlideUpView flex flex-col gap-y-20 xl:flex-row-reverse xl:items-center"
       >
         <img
@@ -53,11 +43,8 @@ const About = () => {
           skills further.
         </p>
       </div>
-      <div className="flex flex-col gap-y-40">
-        <div
-          ref={addContainerRef}
-          className="defaultSlideUpView flex flex-col gap-y-14"
-        >
+      <div className="flex flex-col gap-y-28  lg:gap-y-40">
+        <div ref={addRef} className="defaultSlideUpView flex flex-col gap-y-14">
           <p className="text-2xl lg:text-4xl">Tech Stacks</p>
           <ul className="flex flex-wrap items-center gap-x-8 gap-y-10 text-base font-semibold md:text-2xl md:gap-x-10 lg:text-3xl lg:gap-x-16 xl:gap-x-20">
             <li className="flex items-center gap-x-2 xl:gap-x-4">
@@ -104,10 +91,7 @@ const About = () => {
             </li>
           </ul>
         </div>
-        <div
-          ref={addContainerRef}
-          className="defaultSlideUpView flex flex-col gap-y-14"
-        >
+        <div ref={addRef} className="defaultSlideUpView flex flex-col gap-y-14">
           <p className="text-2xl lg:text-4xl">Softwares </p>
           <ul className="flex flex-wrap items-center gap-x-8 gap-y-10 text-base font-semibold md:text-2xl md:gap-x-10 lg:text-3xl lg:gap-x-16 xl:gap-x-20">
             <li className="flex items-center gap-x-2 xl:gap-x-4">
@@ -137,15 +121,12 @@ const About = () => {
           </ul>
         </div>
         <div className="flex flex-col gap-y-14">
-          <p
-            ref={addContainerRef}
-            className="defaultSlideUpView text-2xl lg:text-4xl"
-          >
+          <p ref={addRef} className="defaultSlideUpView text-2xl lg:text-4xl">
             Skills
           </p>
           <div className="flex flex-col gap-y-32">
             <div
-              ref={addContainerRef}
+              ref={addRef}
               className="defaultSlideUpView flex flex-col gap-y-10 text-center"
             >
               <p className="text-xl font-500 md:text-2xl">
@@ -163,7 +144,7 @@ const About = () => {
             </div>
 
             <div
-              ref={addContainerRef}
+              ref={addRef}
               className="defaultSlideUpView flex flex-col gap-y-10 text-center"
             >
               <p className="text-xl font-500 md:text-2xl">Graphic Design</p>

@@ -1,21 +1,26 @@
 import React from "react";
-import computer from "../images/hero/computer.png";
-import { useState, useEffect } from "react";
+import { useThemeContext } from "../hooks/Providers/ThemeProvider";
+import useHeroAnimation from "../hooks/useHeroAnimation";
+import useActiveList from "../hooks/useActiveList";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-const Hero = ({ setTheme }) => {
+const Hero = () => {
+  const { currentImage } = useHeroAnimation();
+  const { theme, setTheme } = useThemeContext();
+
   return (
     <section
       className="mt-[15vh] flex flex-col items-center md:flex-row-reverse md:justify-between xl:mt-[30vh]"
       id="intro"
     >
-      <div className="flex justify-center md:basis-[40%]">
+      <div className="flex justify-center md:basis-[40%] relative">
         <img
-          src={computer}
-          alt="Computer"
-          className="w-72 h-72 md:w-80 md:h-80 xl:w-96 xl:h-96"
+          src={currentImage}
+          alt="Hero Image"
+          className={`w-72 h-72 md:w-80 md:h-80 xl:w-96 xl:h-96 animate-fadeIn`}
         />
       </div>
       <div className="flex flex-col gap-y-20 md:basis-[60%]">
@@ -62,27 +67,43 @@ const Hero = ({ setTheme }) => {
           </p>
           <div className="flex justify-evenly">
             <div
-              className="w-4 h-4 bg-[#000] rounded-full border-2 border-accent md:w-6 md:h-6 2xl:w-8 xl:h-8"
+              className={`w-4 h-4 bg-[#000] rounded-full  md:w-6 md:h-6 2xl:w-8 xl:h-8 ${
+                theme === "classicBlackAndWhite" &&
+                "border-2 border-[var(--color-text)]"
+              }`}
               onClick={() => setTheme("classicBlackAndWhite")}
             ></div>
             <div
-              className="w-4 h-4 bg-[#7b34d4] rounded-full md:w-6 md:h-6 2xl:w-8 xl:h-8"
+              className={`w-4 h-4 bg-[#7b34d4] rounded-full md:w-6 md:h-6 2xl:w-8 xl:h-8 ${
+                theme === "twilightBliss" &&
+                "border-2 border-[var(--color-text)]"
+              }`}
               onClick={() => setTheme("twilightBliss")}
             ></div>
             <div
-              className="w-4 h-4 bg-[#e44a40] rounded-full md:w-6 md:h-6 2xl:w-8 xl:h-8"
+              className={`w-4 h-4 bg-[#e44a40] rounded-full md:w-6 md:h-6 2xl:w-8 xl:h-8 ${
+                theme === "bloodMoon" && "border-2 border-[var(--color-text)]"
+              }`}
               onClick={() => setTheme("bloodMoon")}
             ></div>
             <div
-              className="w-4 h-4 bg-[#428439] rounded-full md:w-6 md:h-6 2xl:w-8 xl:h-8"
+              className={`w-4 h-4 bg-[#428439] rounded-full md:w-6 md:h-6 2xl:w-8 xl:h-8 ${
+                theme === "rainforestExplore" &&
+                "border-2 border-[var(--color-text)]"
+              }`}
               onClick={() => setTheme("rainforestExplore")}
             ></div>
             <div
-              className="w-4 h-4 bg-[#12CEF7] rounded-full md:w-6 md:h-6 2xl:w-8 xl:h-8"
+              className={`w-4 h-4 bg-[#12CEF7] rounded-full md:w-6 md:h-6 2xl:w-8 xl:h-8 ${
+                theme === "blessedAqua" && "border-2 border-[var(--color-text)]"
+              }`}
               onClick={() => setTheme("blessedAqua")}
             ></div>
             <div
-              className="w-4 h-4 bg-[#fff] rounded-full md:w-6 md:h-6 2xl:w-8 xl:h-8"
+              className={`w-4 h-4 bg-[#fff] rounded-full md:w-6 md:h-6 2xl:w-8 xl:h-8 ${
+                theme === "classicWhiteAndBlack" &&
+                "border-2 border-[var(--color-text)]"
+              }`}
               onClick={() => setTheme("classicWhiteAndBlack")}
             ></div>
           </div>
