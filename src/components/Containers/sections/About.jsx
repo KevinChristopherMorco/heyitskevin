@@ -1,6 +1,6 @@
 import React from "react";
-import useScrollEffect from "../hooks/useScrollEffect";
-import author from "../images/author/grad-pic.png";
+import useScrollEffect from "../../../hooks/useScrollEffect";
+import author from "../../../images/author/grad-pic.png";
 
 import {
   IconBrandAdobePhotoshop,
@@ -15,8 +15,8 @@ import {
   IconBrandVisualStudio,
 } from "@tabler/icons-react";
 
-import development from "../images/about-card/web-development.png";
-import graphics from "../images/about-card/graphic-design.png";
+import development from "../../../images/about-card/web-development.png";
+import graphics from "../../../images/about-card/graphic-design.png";
 
 const About = () => {
   const { addRef } = useScrollEffect("animateSlideUp");

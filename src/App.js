@@ -1,10 +1,11 @@
 import logo from "./logo.svg";
 import Header from "./components/Partials/Header";
 import Footer from "./components/Partials/Footer";
-import Hero from "./components/Hero";
-import About from "./components/About";
+import Hamburger from "./components/Partials/Hamburger";
+
+import Hero from "./components/Containers/sections/Hero";
+import About from "./components/Containers/sections/About";
 import ProjectContainer from "./components/Containers/ProjectContainer";
-import Hamburger from "./components/Hamburger";
 
 import ThemeProvider from "./hooks/Providers/ThemeProvider";
 

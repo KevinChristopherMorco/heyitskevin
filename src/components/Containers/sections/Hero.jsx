@@ -1,7 +1,7 @@
 import React from "react";
-import { useThemeContext } from "../hooks/Providers/ThemeProvider";
-import useHeroAnimation from "../hooks/useHeroAnimation";
-import useActiveList from "../hooks/useActiveList";
+import { useThemeContext } from "../../../hooks/Providers/ThemeProvider";
+import useHeroAnimation from "../../../hooks/useHeroAnimation";
+import useActiveList from "../../../hooks/useActiveList";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

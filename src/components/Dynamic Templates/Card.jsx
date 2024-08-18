@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef } from "react";
 import {
   IconDeviceGamepad2,
   IconTerminal2,
@@ -20,7 +20,7 @@ const Card = forwardRef(function Card(
     >
       <div className="h-72 md:h-52 xl:h-96">
         <img
-          src={require(`../images/project-card/${image}`)}
+          src={require(`../../images/project-card/${image}`)}
           alt="image"
           className="w-full h-full rounded-lg"
         />
