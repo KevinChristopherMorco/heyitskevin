@@ -45,8 +45,8 @@ const About = () => {
         />
         <p className="text-center md:text-xl lg:text-2xl xl:text-start xl:basis-[70%] 2xl:text-3xl">
           Hi!, I'm Kevin Christopher Morco a graduate at Laguna State
-          Polytechnic University. I do love programming and creating web designs
-          and their corresponding functionalities I have strong attention to
+          Polytechnic University. I do love programming, creating web designs
+          and optimizing its functionalities. I have strong attention to
           details and willingly to collaborate for the success of every project,
           also willing to try new things especially on tech stacks to enhance my
           skills further.
