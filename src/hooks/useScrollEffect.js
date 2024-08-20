@@ -1,19 +1,28 @@
 import { useRef, useEffect } from "react";
 
 const useScrollEffect = (animation) => {
-  const ref = useRef([]);
+  const targetRef = useRef([]);
+  const observerRef = useRef();
 
   useEffect(() => {
-    const observe = new IntersectionObserver((entries) => {
+    observerRef.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) =>
         entry.target.classList.toggle(animation, entry.isIntersecting)
       );
     });
-    ref.current.forEach((ref) => observe.observe(ref));
-  }, [ref]);
-  const addRef = (refs) => ref.current.push(refs);
+  }, []);
 
-  return { addRef };
+  useEffect(() => {
+    targetRef.current.forEach((ref) => observerRef.current.observe(ref));
+
+    return () => {
+      observerRef.current.disconnect();
+    };
+  }, [targetRef]);
+
+  const ref = (refs) => targetRef.current.push(refs);
+
+  return { ref };
 };
 
 export default useScrollEffect;

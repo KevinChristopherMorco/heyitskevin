@@ -1,6 +1,10 @@
 import React from "react";
 import useScrollEffect from "../../../hooks/useScrollEffect";
 import author from "../../../images/author/grad-pic.png";
+import development from "../../../images/about-card/web-development.png";
+import graphics from "../../../images/about-card/graphic-design.png";
+
+import { useInView } from "react-intersection-observer";
 
 import {
   IconBrandAdobePhotoshop,
@@ -15,26 +19,31 @@ import {
   IconBrandVisualStudio,
 } from "@tabler/icons-react";
 
-import development from "../../../images/about-card/web-development.png";
-import graphics from "../../../images/about-card/graphic-design.png";
-
 const About = () => {
-  const { addRef } = useScrollEffect("animateSlideUp");
+  const { ref: authorSec, inView: viewAuthorSec } = useInView();
+  const { ref: techSec, inView: viewTechSec } = useInView();
+  const { ref: softwareSec, inView: viewSoftwareSec } = useInView();
+  const { ref: skillsSec, inView: viewSkillsSec } = useInView();
+  const { ref: webDev, inView: viewWebDev } = useInView();
+  const { ref: graphic, inView: viewGraphic } = useInView();
+
   return (
-    <section className="flex flex-col gap-y-20" id="about">
-      <p className="mb-6 flex items-center gap-x-4 text-3xl font-bold before:h-[0.2rem] before:w-[3rem] before:bg-[var(--color-accent)] after:h-[0.2rem] after:w-[3rem] after:bg-[var(--color-accent)] md:text-4xl md:before:hidden md:after:w-[20rem] lg:mb-32 lg:after:w-[36rem] lg:text-5xl ">
+    <section className="flex flex-col gap-y-32" id="about">
+      <p className="mb-6 flex items-center gap-x-4 text-3xl text-[var(--color-accent)] font-extrabold before:h-[0.2rem] before:w-[3rem] before:bg-[var(--color-accent)] after:h-[0.2rem] after:w-[3rem] after:bg-[var(--color-accent)] md:text-4xl md:before:hidden md:after:w-[20rem] lg:mb-32 lg:after:w-[36rem] lg:text-5xl ">
         Who am I?
       </p>
       <div
-        ref={addRef}
-        className="defaultSlideUpView flex flex-col gap-y-20 xl:flex-row-reverse xl:items-center"
+        ref={authorSec}
+        className={`defaultSlideUpView flex flex-col gap-y-20 xl:flex-row-reverse xl:items-center ${
+          viewAuthorSec && "animateSlideUp"
+        }`}
       >
         <img
           src={author}
           alt="author"
           className="w-52 h-52 m-auto xl:w-64 xl:h-64"
         />
-        <p className="text-center md:text-xl xl:text-start xl:basis-[70%]">
+        <p className="text-center md:text-xl lg:text-2xl xl:text-start xl:basis-[70%] 2xl:text-3xl">
           Hi!, I'm Kevin Christopher Morco a graduate at Laguna State
           Polytechnic University. I do love programming and creating web designs
           and their corresponding functionalities I have strong attention to
@@ -44,8 +53,15 @@ const About = () => {
         </p>
       </div>
       <div className="flex flex-col gap-y-28  lg:gap-y-40">
-        <div ref={addRef} className="defaultSlideUpView flex flex-col gap-y-14">
-          <p className="text-2xl lg:text-4xl">Tech Stacks</p>
+        <div
+          ref={techSec}
+          className={`defaultSlideUpView flex flex-col gap-y-14 ${
+            viewTechSec && "animateSlideUp"
+          }`}
+        >
+          <p className="text-2xl text-[var(--color-accent)] font-extrabold md:text-3xl lg:text-4xl xl:text-5xl">
+            Tech Stacks
+          </p>
           <ul className="flex flex-wrap items-center gap-x-8 gap-y-10 text-base font-semibold md:text-2xl md:gap-x-10 lg:text-3xl lg:gap-x-16 xl:gap-x-20">
             <li className="flex items-center gap-x-2 xl:gap-x-4">
               <span className="text-js">
@@ -91,8 +107,15 @@ const About = () => {
             </li>
           </ul>
         </div>
-        <div ref={addRef} className="defaultSlideUpView flex flex-col gap-y-14">
-          <p className="text-2xl lg:text-4xl">Softwares </p>
+        <div
+          ref={softwareSec}
+          className={`defaultSlideUpView flex flex-col gap-y-14 ${
+            viewSoftwareSec && "animateSlideUp"
+          }`}
+        >
+          <p className="text-2xl text-[var(--color-accent)] font-extrabold md:text-3xl lg:text-4xl xl:text-5xl">
+            Softwares{" "}
+          </p>
           <ul className="flex flex-wrap items-center gap-x-8 gap-y-10 text-base font-semibold md:text-2xl md:gap-x-10 lg:text-3xl lg:gap-x-16 xl:gap-x-20">
             <li className="flex items-center gap-x-2 xl:gap-x-4">
               <span className="text-photoshop">
@@ -121,15 +144,22 @@ const About = () => {
           </ul>
         </div>
         <div className="flex flex-col gap-y-14">
-          <p ref={addRef} className="defaultSlideUpView text-2xl lg:text-4xl">
+          <p
+            ref={skillsSec}
+            className={`defaultSlideUpView text-2xl text-[var(--color-accent)] font-extrabold md:text-3xl lg:text-4xl xl:text-5xl ${
+              viewSkillsSec && "animateSlideUp"
+            }`}
+          >
             Skills
           </p>
-          <div className="flex flex-col gap-y-32">
+          <div className="flex flex-col gap-y-32 md:text-xl lg:text-2xl 2xl:text-3xl">
             <div
-              ref={addRef}
-              className="defaultSlideUpView flex flex-col gap-y-10 text-center"
+              ref={webDev}
+              className={`defaultSlideUpView flex flex-col gap-y-10 text-center ${
+                viewWebDev && "animateSlideUp"
+              }`}
             >
-              <p className="text-xl font-500 md:text-2xl">
+              <p className="text-xl font-500 md:text-3xl 2xl:text-4xl">
                 Web Design and Development
               </p>
               <p>
@@ -144,10 +174,14 @@ const About = () => {
             </div>
 
             <div
-              ref={addRef}
-              className="defaultSlideUpView flex flex-col gap-y-10 text-center"
+              ref={graphic}
+              className={`defaultSlideUpView flex flex-col gap-y-10 text-center ${
+                viewGraphic && "animateSlideUp"
+              }`}
             >
-              <p className="text-xl font-500 md:text-2xl">Graphic Design</p>
+              <p className="text-xl font-500 md:text-3xl 2xl:text-4xl">
+                Graphic Design
+              </p>
               <p>
                 In addition to my web design and development skills, I enjoy
                 doing graphic designs. I like to create eye-catching thumbnails

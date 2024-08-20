@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const useActiveList = () => {
+  const [screen, setScreen] = useState(false);
   const [activeState, setActiveState] = useState({
     hamburger: false,
+    list: null,
   });
+
   const setActive = (type, value) => {
     setActiveState((prev) => ({ ...prev, [type]: value }));
   };
