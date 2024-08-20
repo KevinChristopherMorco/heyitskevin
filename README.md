@@ -6,6 +6,10 @@ This is my first customized portfolio built using ReactJS.
 
 **Client:** HTML, CSS, JavaScript, React, TailwindCSS, Web Storage API
 
+## Screenshots
+
+![HeyItsKevin](src/images/screenshots/example.png)
+
 ## Acknowledgements
 
 These lists of documentation are what I'm currently using:
