@@ -1,5 +1,16 @@
 [
   {
+    "image": "cuisine-craze.png",
+    "title": "Cuisine Craze",
+    "subtitle": "Mini Project",
+    "information": "Find recipes all around the globe!",
+    "stack": ["javascript", "react", "html", "css"],
+    "gitRef": "https://github.com/KevinChristopherMorco/cuisine-craze/tree/master",
+    "liveRef": "https://cuisine-craze.vercel.app/",
+    "liveSite": true
+  },
+
+  {
     "image": "country-app.png",
     "title": "Where in the world?",
     "subtitle": "Mini Project",
