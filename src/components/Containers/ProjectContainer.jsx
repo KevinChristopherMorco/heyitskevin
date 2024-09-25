@@ -16,26 +16,28 @@ const ProjectContainer = () => {
         Projects
       </p>
       <div className="flex flex-col gap-y-20 md:flex-row flex-wrap md:justify-around xl:justify-between">
-        {project.map(
-          (
-            { image, title, subtitle, information, liveRef, gitRef, stack },
-            index
-          ) => {
-            return (
-              <Card
-                key={index}
-                image={image}
-                title={title}
-                subTitle={subtitle}
-                description={information}
-                liveLink={liveRef}
-                sourceLink={gitRef}
-                projectStack={stack}
-                inView={inView}
-              />
-            );
-          }
-        )}
+        {project
+          .filter((project) => project.isHidden)
+          .map(
+            (
+              { image, title, subtitle, information, liveRef, gitRef, stack },
+              index
+            ) => {
+              return (
+                <Card
+                  key={index}
+                  image={image}
+                  title={title}
+                  subTitle={subtitle}
+                  description={information}
+                  liveLink={liveRef}
+                  sourceLink={gitRef}
+                  projectStack={stack}
+                  inView={inView}
+                />
+              );
+            }
+          )}
       </div>
     </section>
   );
