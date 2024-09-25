@@ -17,7 +17,7 @@ const ProjectContainer = () => {
       </p>
       <div className="flex flex-col gap-y-20 md:flex-row flex-wrap md:justify-around xl:justify-between">
         {project
-          .filter((project) => project.isHidden)
+          .filter((project) => !project.isHidden)
           .map(
             (
               { image, title, subtitle, information, liveRef, gitRef, stack },
