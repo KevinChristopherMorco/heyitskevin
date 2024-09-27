@@ -1,5 +1,16 @@
 [
   {
+    "image": "penny-wise.png",
+    "title": "Penny Wise",
+    "subtitle": "Mini Project",
+    "information": "Manage your Expenses and Budget with ease!",
+    "stack": ["javascript", "react", "html", "css"],
+    "gitRef": "https://github.com/KevinChristopherMorco/penny-wise",
+    "liveRef": "https://penny-wise-nu.vercel.app/",
+    "liveSite": true,
+    "isHidden": false
+  },
+  {
     "image": "cuisine-craze.png",
     "title": "Cuisine Craze",
     "subtitle": "Mini Project",
